@@ -24,14 +24,14 @@ namespace zich{
             Matrix operator-(); // unary minus 
 
             // comparing operators
-            bool operator==(const Matrix& mat);
-            bool operator<(const Matrix& mat);
-            bool operator>(const Matrix& mat);
-            bool operator<=(const Matrix& mat);
-            bool operator>=(const Matrix& mat);
-            bool operator!=(const Matrix& mat);
+            bool operator==(Matrix& mat);
+            bool operator<(Matrix& mat);
+            bool operator>(Matrix& mat);
+            bool operator<=(Matrix& mat);
+            bool operator>=(Matrix& mat);
+            bool operator!=(Matrix& mat);
 
-            // multiplaying operators
+            // multiplying operators
             friend Matrix operator*(double a, const Matrix& mat);
             friend Matrix operator*(const Matrix& mat, double a);
             friend Matrix& operator*=(Matrix& mat, double a);

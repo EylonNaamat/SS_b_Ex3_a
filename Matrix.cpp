@@ -32,23 +32,23 @@ Matrix Matrix::operator-(){
     return a;
 }
 
-bool Matrix::operator==(const Matrix& mat){
+bool Matrix::operator==(Matrix& mat){
     return true;
 }
-bool Matrix::operator<(const Matrix& mat){
+bool Matrix::operator<(Matrix& mat){
     return true;
 }
 
-bool Matrix::operator>(const Matrix& mat){
+bool Matrix::operator>(Matrix& mat){
     return true;
 }
-bool Matrix::operator<=(const Matrix& mat){
+bool Matrix::operator<=(Matrix& mat){
     return true;
 }
-bool Matrix::operator>=(const Matrix& mat){
+bool Matrix::operator>=(Matrix& mat){
     return true;
 }
-bool Matrix::operator!=(const Matrix& mat){
+bool Matrix::operator!=(Matrix& mat){
     return true;
 }
 

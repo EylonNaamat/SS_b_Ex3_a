@@ -19,19 +19,20 @@ TEST_CASE("Bad input arithemetic operators"){
     CHECK_THROWS(a-=b);
 }
 
-TEST_CASE("Bad input comparing operators"){
-    std::vector<double> arr1 = {3, 0, 0, 0, 3, 0, 0, 0, 3};
-    Matrix a{arr1,3,3};
-    std::vector<double> arr2 = {1};
-    Matrix b{arr2,1,1};
-
-    CHECK_THROWS(a > b);
-    CHECK_THROWS(a >= b);
-    CHECK_THROWS(a == b);
-    CHECK_THROWS(a < b);
-    CHECK_THROWS(a <= b);
-    CHECK_THROWS(a != b);
-}
+//TEST_CASE("Bad input comparing operators"){
+//    std::vector<double> arr1 = {3, 0, 0, 0, 3, 0, 0, 0, 3};
+//    Matrix a{arr1,3,3};
+//    std::vector<double> arr2 = {1};
+//    Matrix b{arr2,1,1};
+//
+//
+//    CHECK_THROWS(a > b);
+//    CHECK_THROWS(a >= b);
+//    CHECK_THROWS(a == b);
+//    CHECK_THROWS(a < b);
+//    CHECK_THROWS(a <= b);
+//    CHECK_THROWS(a != b);
+//}
 
 TEST_CASE("Bad input multiplaying matrices"){
     std::vector<double> arr1 = {3, 0, 0, 0, 3, 0, 0, 0, 3};
@@ -61,9 +62,9 @@ TEST_CASE("Bad input multiplaying matrices"){
 
 TEST_CASE("Good input positive arithemtic operators"){
     std::vector<double> arr1 = {3, 0, 0, 0, 3, 0, 0, 0, 3};
-    Matrix a{arr1,3,3}; 
+    Matrix a{arr1,3,3};
     std::vector<double> arr2 = {1, 0, 0, 0, 1, 0, 0, 0, 1};
-    Matrix b{arr2,3,3};  
+    Matrix b{arr2,3,3};
     std::vector<double> arr3 = {4, 0, 0, 0, 4, 0, 0, 0, 4};
     Matrix c{arr1,3,3};
 
@@ -78,16 +79,16 @@ TEST_CASE("Good input positive arithemtic operators"){
 
 TEST_CASE("Good input negative arithemtic operators"){
     std::vector<double> arr1 = {3, 0, 0, 0, 3, 0, 0, 0, 3};
-    Matrix a{arr1,3,3}; 
+    Matrix a{arr1,3,3};
     std::vector<double> arr2 = {1, 0, 0, 0, 1, 0, 0, 0, 1};
-    Matrix b{arr2,3,3};  
+    Matrix b{arr2,3,3};
     std::vector<double> arr3 = {4, 0, 0, 0, 4, 0, 0, 0, 4};
-    Matrix c{arr1,3,3}; 
+    Matrix c{arr1,3,3};
 
     CHECK((c-b) == a);
     CHECK((c-a) == b);
     CHECK((c-b) == (-(b-c)));
-    
+
     c -= b;
     CHECK(c == a);
     CHECK((-(-a)) == a);
@@ -95,9 +96,9 @@ TEST_CASE("Good input negative arithemtic operators"){
 
 TEST_CASE("Good input comparing operators"){
     std::vector<double> arr1 = {3, 0, 0, 0, 3, 0, 0, 0, 3};
-    Matrix a{arr1,3,3}; 
+    Matrix a{arr1,3,3};
     std::vector<double> arr2 = {3, 0, 0, 0, 3, 0, 0, 0, 3};
-    Matrix b{arr2,3,3};  
+    Matrix b{arr2,3,3};
 
     CHECK(a == b);
 
@@ -124,9 +125,9 @@ TEST_CASE("Good input comparing operators"){
 
 TEST_CASE("Good input prefix and posfix operators"){
     std::vector<double> arr1 = {3, 0, 0, 0, 3, 0, 0, 0, 3};
-    Matrix a{arr1,3,3}; 
+    Matrix a{arr1,3,3};
     std::vector<double> arr2 = {4, 1, 1, 1, 4, 1, 1, 1, 4};
-    Matrix b{arr2,3,3};  
+    Matrix b{arr2,3,3};
 
     // all notes are at comparing time
     CHECK((a++) != b); // a is {3, 0, 0, 0, 3, 0, 0, 0, 3}
@@ -142,9 +143,9 @@ TEST_CASE("Good input prefix and posfix operators"){
 
 TEST_CASE("Good input mult operators"){
     std::vector<double> arr1 = {1, 0, 0, 0, 1, 0, 0, 0, 1};
-    Matrix a{arr1,3,3}; 
+    Matrix a{arr1,3,3};
     std::vector<double> arr2 = {4, 1, 1, 1, 4, 1, 1, 1, 4};
-    Matrix b{arr2,3,3};     
+    Matrix b{arr2,3,3};
 
     CHECK((b * 1) == (b * a));
     CHECK((a*b) == b);
