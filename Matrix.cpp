@@ -51,11 +51,11 @@ zich::Matrix& zich::operator*(Matrix& mat, double a){
 zich::Matrix& zich::operator*=(Matrix& mat, double a){
     return mat;
 }
-zich::Matrix& zich::operator*(Matrix& a, const Matrix& b){
-    return a;
+zich::Matrix& zich::Matrix::operator*(Matrix& a){
+    return *this;
 }
-zich::Matrix& zich::operator*=(Matrix& a, const Matrix& b){
-    return a;
+zich::Matrix& zich::Matrix::operator*=(Matrix& a){
+    return *this;
 }
 
 zich::Matrix& zich::Matrix::operator++(){

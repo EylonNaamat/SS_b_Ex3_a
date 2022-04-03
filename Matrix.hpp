@@ -35,10 +35,10 @@ namespace zich{
             friend Matrix& operator*(double a, Matrix& mat);
             friend Matrix& operator*(Matrix& mat, double a);
             friend Matrix& operator*=(Matrix& mat, double a);
-            friend Matrix& operator*(Matrix& a, const Matrix& b);
-            friend Matrix& operator*=(Matrix& a, const Matrix& b);
+            Matrix& operator*(Matrix& a);
+            Matrix& operator*=(Matrix& a);
 
-            // postfix and prefix addition and substruction
+            // postfix and prefix addition and subtraction
             Matrix& operator++(); // prefix operator i.e ++mat
             Matrix& operator++(int a); // suffix operator i.e mat++
             Matrix& operator--(); // prefix operator i.e --mat
