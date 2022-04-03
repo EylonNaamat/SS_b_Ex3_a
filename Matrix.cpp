@@ -1,96 +1,80 @@
 #include "Matrix.hpp"
-#include <vector>
-#include <iostream>
-using namespace zich;
 
 
-Matrix Matrix::operator+(const Matrix& other){
-    std::vector<double> arr = {3, 0, 0, 0, 3, 0, 0, 0, 3};
-    Matrix a(arr,3,3);
-    return a;
-}
-Matrix& Matrix::operator+=(const Matrix& other){
+
+zich::Matrix& zich::Matrix::operator+(const Matrix& other){
     return *this;
 }
-Matrix Matrix::operator+(){
-    std::vector<double> arr = {3, 0, 0, 0, 3, 0, 0, 0, 3};
-    Matrix a(arr,3,3);
-    return a;
-}
-
-Matrix Matrix::operator-(const Matrix& other){
-    std::vector<double> arr = {3, 0, 0, 0, 3, 0, 0, 0, 3};
-    Matrix a(arr,3,3);
-    return a;   
-}
-Matrix& Matrix::operator-=(const Matrix& other){
+zich::Matrix& zich::Matrix::operator+=(const Matrix& other){
     return *this;
 }
-Matrix Matrix::operator-(){
-    std::vector<double> arr = {3, 0, 0, 0, 3, 0, 0, 0, 3};
-    Matrix a(arr,3,3);
-    return a;
+zich::Matrix& zich::Matrix::operator+(){
+    return *this;
 }
 
-bool Matrix::operator==(Matrix& mat){
-    return true;
+zich::Matrix& zich::Matrix::operator-(const Matrix& other){
+    return *this;
 }
-bool Matrix::operator<(Matrix& mat){
-    return true;
+zich::Matrix& zich::Matrix::operator-=(const Matrix& other){
+    return *this;
+}
+zich::Matrix& zich::Matrix::operator-(){
+    return *this;
 }
 
-bool Matrix::operator>(Matrix& mat){
+bool zich::Matrix::operator==(Matrix& mat){
     return true;
 }
-bool Matrix::operator<=(Matrix& mat){
-    return true;
-}
-bool Matrix::operator>=(Matrix& mat){
-    return true;
-}
-bool Matrix::operator!=(Matrix& mat){
+bool zich::Matrix::operator<(Matrix& mat){
     return true;
 }
 
-Matrix operator*(double a, const Matrix& mat){
-    std::vector<double> arr = {3, 0, 0, 0, 3, 0, 0, 0, 3};
-    Matrix b(arr,3,3);
-    return b;
+bool zich::Matrix::operator>(Matrix& mat){
+    return true;
 }
-Matrix operator*(const Matrix& mat, double a){
-    std::vector<double> arr = {3, 0, 0, 0, 3, 0, 0, 0, 3};
-    Matrix b(arr,3,3);
-    return b;    
+bool zich::Matrix::operator<=(Matrix& mat){
+    return true;
 }
-Matrix& operator*=(Matrix& mat, double a){
+bool zich::Matrix::operator>=(Matrix& mat){
+    return true;
+}
+bool zich::Matrix::operator!=(Matrix& mat){
+    return true;
+}
+
+zich::Matrix& zich::operator*(double a, Matrix& mat){
     return mat;
 }
-Matrix operator*(const Matrix& a, const Matrix& b){
-    std::vector<double> arr = {3, 0, 0, 0, 3, 0, 0, 0, 3};
-    Matrix c(arr,3,3);
-    return c;
+zich::Matrix& zich::operator*(Matrix& mat, double a){
+    return mat;
 }
-Matrix& operator*=(Matrix& a, const Matrix& b){
+zich::Matrix& zich::operator*=(Matrix& mat, double a){
+    return mat;
+}
+zich::Matrix& zich::operator*(Matrix& a, const Matrix& b){
+    return a;
+}
+zich::Matrix& zich::operator*=(Matrix& a, const Matrix& b){
     return a;
 }
 
-Matrix& Matrix::operator++(){
+zich::Matrix& zich::Matrix::operator++(){
     return *this;
 }
-Matrix& Matrix::operator++(int a){
+zich::Matrix& zich::Matrix::operator++(int a){
     return *this;
 }
-Matrix& Matrix::operator--(){
+zich::Matrix& zich::Matrix::operator--(){
     return *this;
 }
-Matrix& Matrix::operator--(int a){
+zich::Matrix& zich::Matrix::operator--(int a){
     return *this;
 }
 
-std::ostream& operator<<(std::ostream& os, const Matrix& mat){
+std::ostream& zich::operator<<(std::ostream& os, const Matrix& mat){
     return os;
 }
 
-std::istream& operator>>(std::istream& is, const Matrix& mat){
+std::istream& zich::operator>>(std::istream& is, const Matrix& mat){
     return is;
 }
