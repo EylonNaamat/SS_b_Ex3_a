@@ -20,29 +20,29 @@ namespace zich{
             Matrix& operator+(); // unary plus
 
             Matrix& operator-(const Matrix& other); // binary minus
-            Matrix& operator-=(const Matrix& other); // binary substraction
+            Matrix& operator-=(const Matrix& other); // binary subtraction
             Matrix& operator-(); // unary minus
 
             // comparing operators
-            bool operator==(Matrix& mat);
-            bool operator<(Matrix& mat);
-            bool operator>(Matrix& mat);
-            bool operator<=(Matrix& mat);
-            bool operator>=(Matrix& mat);
-            bool operator!=(Matrix& mat);
+            bool operator==(const Matrix& mat);
+            bool operator<(const Matrix& mat);
+            bool operator>(const Matrix& mat);
+            bool operator<=(const Matrix& mat);
+            bool operator>=(const Matrix& mat);
+            bool operator!=(const Matrix& mat);
 
             // multiplying operators
             friend Matrix& operator*(double a, Matrix& mat);
-            friend Matrix& operator*(Matrix& mat, double a);
-            friend Matrix& operator*=(Matrix& mat, double a);
-            Matrix& operator*(Matrix& a);
-            Matrix& operator*=(Matrix& a);
+            Matrix& operator*(double a);
+            Matrix& operator*=(double a);
+            Matrix& operator*(const Matrix& a);
+            Matrix& operator*=(const Matrix& a);
 
             // postfix and prefix addition and subtraction
             Matrix& operator++(); // prefix operator i.e ++mat
-            Matrix& operator++(int a); // suffix operator i.e mat++
+            Matrix& operator++(int); // suffix operator i.e mat++
             Matrix& operator--(); // prefix operator i.e --mat
-            Matrix& operator--(int a); // suffix operator i.e mat--
+            Matrix& operator--(int); // suffix operator i.e mat--
 
             // input output operators
             friend std::ostream& operator<<(std::ostream& os, const Matrix& mat);

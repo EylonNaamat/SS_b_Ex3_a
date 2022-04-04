@@ -2,11 +2,9 @@
 #include <vector>
 #include "Matrix.hpp"
 
-
-
 using namespace zich;
 
-TEST_CASE("Bad input arithemetic operators"){
+TEST_CASE("Bad input arithmetic operators"){
     std::vector<double> arr1 = {3, 0, 0, 0, 3, 0, 0, 0, 3};
     Matrix a{arr1,3,3};
     std::vector<double> arr2 = {1};
@@ -32,12 +30,12 @@ TEST_CASE("Bad input comparing operators"){
 //    CHECK_THROWS((a <= b));
 //    CHECK_THROWS((a != b));
 
-//    CHECK_THROWS((a.operator>(b)));
-//    CHECK_THROWS((a.operator>=(b)));
-//    CHECK_THROWS((a.operator==(b)));
-//    CHECK_THROWS((a.operator<(b)));
-//    CHECK_THROWS((a.operator<=(b)));
-//    CHECK_THROWS((a.operator!=(b)));
+    CHECK_THROWS((a.operator>(b)));
+    CHECK_THROWS((a.operator>=(b)));
+    CHECK_THROWS((a.operator==(b)));
+    CHECK_THROWS((a.operator<(b)));
+    CHECK_THROWS((a.operator<=(b)));
+    CHECK_THROWS((a.operator!=(b)));
 }
 
 TEST_CASE("Bad input multiplying matrices"){
@@ -65,7 +63,7 @@ TEST_CASE("Bad input multiplying matrices"){
 // }
 
 
-TEST_CASE("Good input positive arithemtic operators"){
+TEST_CASE("Good input positive arithmetic operators"){
     std::vector<double> arr1 = {3, 0, 0, 0, 3, 0, 0, 0, 3};
     Matrix a{arr1,3,3};
     std::vector<double> arr2 = {1, 0, 0, 0, 1, 0, 0, 0, 1};
@@ -83,7 +81,7 @@ TEST_CASE("Good input positive arithemtic operators"){
     CHECK(((+a) == a));
 }
 
-TEST_CASE("Good input negative arithemtic operators"){
+TEST_CASE("Good input negative arithmetic operators"){
     std::vector<double> arr1 = {3, 0, 0, 0, 3, 0, 0, 0, 3};
     Matrix a{arr1,3,3};
     std::vector<double> arr2 = {1, 0, 0, 0, 1, 0, 0, 0, 1};
@@ -129,7 +127,7 @@ TEST_CASE("Good input comparing operators"){
     CHECK((!(a > d)));
 }
 
-TEST_CASE("Good input prefix and posfix operators"){
+TEST_CASE("Good input prefix and postfix operators"){
     std::vector<double> arr1 = {3, 0, 0, 0, 3, 0, 0, 0, 3};
     Matrix a{arr1,3,3};
     std::vector<double> arr2 = {4, 1, 1, 1, 4, 1, 1, 1, 4};
@@ -147,7 +145,7 @@ TEST_CASE("Good input prefix and posfix operators"){
     CHECK((a != (++b))); // b is {4, 1, 1, 1, 4, 1, 1, 1, 4}
 }
 
-TEST_CASE("Good input mult operators"){
+TEST_CASE("Good input multiplying operators"){
     std::vector<double> arr1 = {1, 0, 0, 0, 1, 0, 0, 0, 1};
     Matrix a{arr1,3,3};
     std::vector<double> arr2 = {4, 1, 1, 1, 4, 1, 1, 1, 4};
