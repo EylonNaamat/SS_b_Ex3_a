@@ -2,23 +2,23 @@
 
 
 
-zich::Matrix& zich::Matrix::operator+(const Matrix& other){
+zich::Matrix zich::Matrix::operator+(const Matrix& other){
     return *this;
 }
 zich::Matrix& zich::Matrix::operator+=(const Matrix& other){
     return *this;
 }
-zich::Matrix& zich::Matrix::operator+(){
+zich::Matrix zich::Matrix::operator+(){
     return *this;
 }
 
-zich::Matrix& zich::Matrix::operator-(const Matrix& other){
+zich::Matrix zich::Matrix::operator-(const Matrix& other){
     return *this;
 }
 zich::Matrix& zich::Matrix::operator-=(const Matrix& other){
     return *this;
 }
-zich::Matrix& zich::Matrix::operator-(){
+zich::Matrix zich::Matrix::operator-(){
     return *this;
 }
 
@@ -42,16 +42,16 @@ bool zich::Matrix::operator!=(const Matrix& mat){
     return true;
 }
 
-zich::Matrix& zich::operator*(double a, Matrix& mat){
+zich::Matrix zich::operator*(double a, Matrix& mat){
     return mat;
 }
-zich::Matrix& zich::Matrix::operator*(double a){
+zich::Matrix zich::Matrix::operator*(double a){
     return *this;
 }
 zich::Matrix& zich::Matrix::operator*=(double a){
     return *this;
 }
-zich::Matrix& zich::Matrix::operator*(const Matrix& a){
+zich::Matrix zich::Matrix::operator*(const Matrix& a){
     return *this;
 }
 zich::Matrix& zich::Matrix::operator*=(const Matrix& a){
@@ -61,13 +61,13 @@ zich::Matrix& zich::Matrix::operator*=(const Matrix& a){
 zich::Matrix& zich::Matrix::operator++(){
     return *this;
 }
-zich::Matrix& zich::Matrix::operator++(int){
+zich::Matrix zich::Matrix::operator++(int){
     return *this;
 }
 zich::Matrix& zich::Matrix::operator--(){
     return *this;
 }
-zich::Matrix& zich::Matrix::operator--(int){
+zich::Matrix zich::Matrix::operator--(int){
     return *this;
 }
 
