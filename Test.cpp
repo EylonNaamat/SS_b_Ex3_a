@@ -14,6 +14,7 @@ TEST_CASE("Bad input arithmetic operators"){
     CHECK_THROWS((a+=b));
     CHECK_THROWS((a-b));
     CHECK_THROWS((a-=b));
+
 }
 
 TEST_CASE("Bad input comparing operators"){
@@ -57,9 +58,9 @@ TEST_CASE("Bad input multiplying matrices"){
 
 // TEST_CASE("bad input constructor and istream"){
 //     std::vector<double> arr1 = {3, 0, 0, 0, 3, 0, 0, 0, 3};
-//     // CHECK_THROWS((Matrix a{arr1, 3, 5}));
-//     Matrix a;
-//     cin >> a;
+//     CHECK_THROWS((zich::Matrix a{arr1, 3, 5}));
+////     Matrix a;
+////     cin >> a;
 // }
 
 
@@ -87,7 +88,7 @@ TEST_CASE("Good input negative arithmetic operators"){
     std::vector<double> arr2 = {1, 0, 0, 0, 1, 0, 0, 0, 1};
     Matrix b{arr2,3,3};
     std::vector<double> arr3 = {4, 0, 0, 0, 4, 0, 0, 0, 4};
-    Matrix c{arr1,3,3};
+    Matrix c{arr3,3,3};
 
     CHECK(((c-b) == a));
     CHECK(((c-a) == b));
